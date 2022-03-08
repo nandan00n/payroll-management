@@ -13,7 +13,7 @@ export default function LoginandRegister() {
         setValue(newValue);
     };
 
-    const paperStyle={width:490, margin:'20px auto'}
+    const paperStyle={width:490, margin:'20px auto',borderRadius:'10px !important'}
 
     function TabPanel(props) {
         const { children, value, index, ...other } = props;
@@ -28,10 +28,9 @@ export default function LoginandRegister() {
             >
                 {value === index && (
                     <Box >
-                        <Typography>{children}</Typography>
+                        <div>{children}</div>
                     </Box>
                 )}
-                
             </div>
         );
     }

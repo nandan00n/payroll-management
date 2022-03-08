@@ -5,13 +5,9 @@ import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 
+
 export default function Login({ handleChange }) {
 
-    const paperStyle = { padding: '20px', height: '83vh', width: 450, margin: '0 auto' }
-    const avatarStyle = { backgroundColor: '#08dd08' }
-    const textfield = { marginBottom: '30px' }
-    const signin = { marginTop: "20px" }
-    const create = { marginTop: "10px" }
     const initialValues = {
         username: '',
         password: '',
@@ -35,11 +31,11 @@ export default function Login({ handleChange }) {
     })
 
     return (
-        <div>
+        // <div>
             <Grid>
-                <Paper style={paperStyle} className='card'>
+                <Paper className='paperStyle'>
                     <Grid align={'center'}>
-                        <Avatar style={avatarStyle}>
+                        <Avatar className='avatarstyle'>
                             <LoginIcon />
                         </Avatar>
                         <h2>Login</h2>
@@ -49,11 +45,11 @@ export default function Login({ handleChange }) {
                         {(props) => (
                             <Form >
                                 {console.log(props)}
-                                <Field as={TextField} style={textfield} label='Username' name='username'
+                                <Field as={TextField} className='textfield' label='Username' name='username'
                                     placeholder="Username" fullWidth align={'center'}
                                     helperText={<ErrorMessage name='username' />}
                                 />
-                                <Field as={TextField} style={textfield} label='Password' name='password'
+                                <Field as={TextField} className='textfield' label='Password' name='password'
                                     placeholder="Password" fullWidth type={'password'}
                                     helperText={<ErrorMessage name='password' />}
                                 />
@@ -62,22 +58,22 @@ export default function Login({ handleChange }) {
                                         color="primary"
                                     />
                                 } label='Remember me' />
-                                <Button style={signin} variant="contained" disabled={props.isSubmitting} type='submit' color='primary' fullWidth>{props.isSubmitting ? 'Loading' : 'Login'}</Button>
+                                <Button className='signin' variant="contained" disabled={props.isSubmitting} type='submit' color='primary' fullWidth>{props.isSubmitting ? 'Loading' : 'Login'}</Button>
                             </Form>
                         )}
 
                     </Formik>
-                    <Typography style={signin}>
+                    <Typography className='signin' >
                         <Link href="#" > Forgot Password ?
                         </Link>
                     </Typography>
-                    <Typography style={create}> Do you have an account ?
+                    <Typography className='create' > Do you have an account ?
                         <Link href="#" onClick={() => handleChange("event", 1)}>Create an Account
                         </Link>
                     </Typography>
                 </Paper>
             </Grid>
-        </div>
+        // </div>
     )
 }
 

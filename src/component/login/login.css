@@ -6,3 +6,26 @@
     color: red !important;
 }
 
+.paperStyle {
+    padding: 20px;
+    height: 83vh;
+    width: 450;
+    margin: 0 auto;
+    border-radius:10px;
+ }
+
+ .avatarstyle {
+     background-color: #08dd08 !important;
+ }
+
+ .textfield{
+     margin-bottom: 30px !important;
+ }
+
+ .create{
+     margin-top: 10px !important;
+ }
+
+ .sign{
+     margin-top: 20px !important;
+ }

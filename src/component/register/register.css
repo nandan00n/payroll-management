@@ -1,0 +1,18 @@
+.paperStyle{
+    padding: 20px;
+    width: 450px;
+    margin: 0 auto;
+    height: 83vh;
+}
+
+.avatarStyle{
+    background-color: red !important;
+}
+
+.textfield{
+    margin-bottom: 11px !important;
+}
+
+.register{
+    margin-top: 8px !important;
+}
