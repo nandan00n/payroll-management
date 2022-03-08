@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';  
+import Tab from '@mui/material/Tab'; 
 import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import Login from '../login/Login';
@@ -13,12 +12,13 @@ export default function LoginandRegister() {
         setValue(newValue);
     };
 
-    const paperStyle={width:490, margin:'20px auto',borderRadius:'10px !important'}
+    const paperStyle={width:490, margin:'20px auto',borderRadius:'25px !important'}
 
     function TabPanel(props) {
         const { children, value, index, ...other } = props;
 
         return (
+            <>
             <div
                 role="tabpanel"
                 hidden={value !== index}
@@ -32,6 +32,7 @@ export default function LoginandRegister() {
                     </Box>
                 )}
             </div>
+            </>
         );
     }
   return (

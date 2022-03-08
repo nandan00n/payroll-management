@@ -31,7 +31,9 @@ export default function Login({ handleChange }) {
     })
 
     return (
-        // <div>
+        <>
+       
+        <div>
             <Grid>
                 <Paper className='paperStyle'>
                     <Grid align={'center'}>
@@ -73,7 +75,8 @@ export default function Login({ handleChange }) {
                     </Typography>
                 </Paper>
             </Grid>
-        // </div>
+        </div>
+        </>
     )
 }
 

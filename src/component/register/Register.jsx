@@ -1,11 +1,9 @@
-import { Avatar, Button, Checkbox, FormControl, FormControlLabel, FormLabel, Grid, Link, Paper, Radio, RadioGroup, TextField, Typography } from "@mui/material";
-import LoginIcon from '@mui/icons-material/Login';
+import { Avatar, Button, FormControl, Grid, Link, Paper, TextField, Typography } from "@mui/material";
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import '../login/login.css'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import {FormHelperText} from '@material-ui/core'
-// import { Link } from "react-router-dom";
 import './register.css'
 
 export default function Login({ handleChange }) {
