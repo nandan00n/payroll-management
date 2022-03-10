@@ -1,12 +1,16 @@
-.paperStyle{
-    padding: 20px;
+.paperStyle2{
+    padding: 15px;
     width: 450px;
     margin: 0 auto;
     height: 83vh;
 }
 
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 10px !important;
+}
+
 .avatarStyle{
-    background-color: red !important;
+    background-color: #cd41a4 !important;
 }
 
 .textfield{
@@ -15,4 +19,8 @@
 
 .register{
     margin-top: 8px !important;
+}
+
+.login-container{
+    justify-content: flex-start;
 }

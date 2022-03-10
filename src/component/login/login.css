@@ -8,14 +8,13 @@
 
 .paperStyle {
     padding: 20px;
-    height: 83vh;
-    width: 450;
+    height: 82vh;
     margin: 0 auto;
     border-radius:10px;
  }
 
  .avatarstyle {
-     background-color: #08dd08 !important;
+     background-color: #281652 !important;
  }
 
  .textfield{
@@ -28,4 +27,14 @@
 
  .sign{
      margin-top: 20px !important;
+ }
+
+ .css-1fu7jd5-MuiButtonBase-root-MuiButton-root{
+     background-color: #f2cf57 !important;
+ }
+
+ .css-1iwtne7-MuiTypography-root-MuiLink-root{
+     color: #3a1d60 !important;
+     text-decoration: none !important;
+     margin-top: 15px !important;
  }
