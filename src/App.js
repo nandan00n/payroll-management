@@ -1,31 +1,27 @@
 import LoginandRegister from "./component/lrc/LoginandRegister";
-// import Forgetpassword from './component/forgottenpassword/Forgetpassword';
-// import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import Home from './component/homepage/home/Home';
+import Forgetpassword from './component/forgottenpassword/Forgetpassword'; 
+import Analytics from './component/homepage/analytics/Analytics'
 import './App.css'
 
 function App() {
   return (
     <>
-    {/* <BrowserRouter>
-      <ul>
-          <li>
-            <Link to='login'>Login</Link>
-          </li>
+  
+      <Router>
+        <Link to='navbar'></Link>
+        {/* <Link to='/'> Home </Link> */}
+        
+        <Switch>
 
-      </ul>
-    
-    <Routes>
-      <Route />
-
-      <Route />
-
-    </Routes>
-    
-    </BrowserRouter> */}
-
-      {/* // <Login/> */}
-      <LoginandRegister/>
-      {/* <Forgetpassword/> */}
+        <Route exact path='/' component={Home} />
+          <Route exact path='/loginandregister' component={LoginandRegister} />
+          <Route exact path='/forgetpassword' component={Forgetpassword} />
+          <Route exact path='/analytics' component={Analytics}/>
+        </Switch>
+      </Router>
+     
     </>
   );
 }

@@ -6,6 +6,7 @@ import { Paper } from '@mui/material';
 import Login from '../login/Login';
 import Register from '../register/Register';
 import './loginandregister.css';
+import { Link } from 'react-router-dom';
 
 export default function LoginandRegister() {
     const [value, setValue] = useState(0)
@@ -23,8 +24,8 @@ export default function LoginandRegister() {
                 <div
                     role="tabpanel"
                     hidden={value !== index}
-                    id={`simple-tabpanel-${ index }`}
-                    aria-labelledby={`simple-tab-${ index }`}
+                    id={`simple-tabpanel-${index}`}
+                    aria-labelledby={`simple-tab-${index}`}
                     {...other}
                 >
                     {value === index && (
@@ -41,26 +42,30 @@ export default function LoginandRegister() {
 
             <div className='outer-container'>
                 <div className='login-image'>
+                    {/* <span >hello</span>  */}
                     <img src={require('../assests/login.jpg')} alt='login-image' />
+                    <button className='home-button'><Link className='back-home' to='/'> Home </Link></button>
                 </div>
 
-            <div className='inner-container'>
+                <div className='inner-container'>
                     <Paper elevation={20} style={paperStyle2}>
 
-                <Tabs value={value} onChange={handleChange} className='tabs-container' aria-label="disabled tabs example">
-                    <Tab label="Login" />
-                    <Tab label="Register" />
-                </Tabs>
-                <TabPanel value={value} index={0}>
-                    <Login handleChange={handleChange} />
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                    <Register handleChange={handleChange} />
-                </TabPanel>
-            </Paper>
+                        <Tabs value={value} onChange={handleChange} className='tabs-container' aria-label="disabled tabs example">
+                            <Tab label="Login" />
+
+                            <Tab label="Register" />
+
+                        </Tabs>
+                        <TabPanel value={value} index={0}>
+                            <Login handleChange={handleChange} />
+                        </TabPanel>
+                        <TabPanel value={value} index={1}>
+                            <Register handleChange={handleChange} />
+                        </TabPanel>
+                    </Paper>
+                </div>
             </div>
-            </div>
-         
+
         </div>
     )
 }

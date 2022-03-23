@@ -1,0 +1,37 @@
+.appbar{
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.css-1cndkqf-MuiToolbar-root{
+    height:40px !important;
+}
+
+.nav-options{
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img{
+    width: 12vw;
+    height:8.5vh;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    font-weight:600 !important;
+    text-transform: capitalize !important;
+   font-size: 1rem !important;
+   color: rgb(255, 255, 255) !important;
+}
+
+/* .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
+    background-color: white !important;
+    color: #000 !important;
+    border-radius: 15px !important;
+    padding: 1px 1vw !important;
+} */
+
+.dropdown{
+    background-color: white ;
+    width: 10vw !important;
+    color: rgb(255, 255, 255) !important;
+}

@@ -5,15 +5,34 @@
     justify-content: center;
 }
 
+.home-button{
+        position: absolute;
+        top: 3vh;
+        left: 2vw;
+        color: white;
+        font-size: 1.1rem;
+        background-color: #c13db5;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+}
+
+.back-home{
+    text-decoration: none;
+    color: white;
+}
+
 .outer-container{
     display: flex !important;
     width: 50vw !important;
     height: 100vh !important;
+    /* z-index: -1 !important; */
 }
 
 .inner-container{
-    margin: auto;
-    margin-left: 6vw ;
+    margin: auto; 
+    margin-left: 6vw;
      opacity: .9;
 }
 
@@ -36,7 +55,7 @@
         .parent-container{
             display: flex;
             margin-top: auto ; 
-            width: 100%;
+            width: auto;
             height: 100%;
          }
 
@@ -51,7 +70,8 @@
 
     @media screen and (max-width: 600px){
         .parent-container{
-            background-color:#c13db5;
-            width: 100%;
+            background-color:transparent;
+            /* width: 300px !important; */
         }
+         
     }

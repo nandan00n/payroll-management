@@ -25,8 +25,8 @@
      margin-top: 10px !important;
  }
 
- .sign{
-     margin-top: 20px !important;
+ .signin{
+     margin-top: 1rem !important;
  }
 
  .css-1fu7jd5-MuiButtonBase-root-MuiButton-root{
@@ -34,7 +34,8 @@
  }
 
  .css-1iwtne7-MuiTypography-root-MuiLink-root{
-     color: #3a1d60 !important;
+     font-weight: 600 !important;
+     color: #2b045f !important;
      text-decoration: none !important;
      margin-top: 15px !important;
  }
