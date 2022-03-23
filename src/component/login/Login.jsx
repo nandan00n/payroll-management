@@ -1,10 +1,9 @@
-import { Avatar, Button, Checkbox, FormControlLabel, Grid, Link, Paper, TextField, Typography } from "@mui/material";
+import { Avatar, Button, Checkbox, FormControlLabel, Grid, Paper, TextField, Typography } from "@mui/material";
 import LoginIcon from '@mui/icons-material/Login';
-import './login.css'
-import { Formik, Field, Form, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
-import Forgetpassword from '../forgottenpassword/Forgetpassword'
-
+import './login.css';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { Link} from 'react-router-dom';
 
 export default function Login({ handleChange }) {
 
@@ -32,52 +31,47 @@ export default function Login({ handleChange }) {
 
     return (
         <>
-            
+
             <div className="login-container">
                 <div className="login-image">
-                    {/* <img src={require('../assests/login.jpg')} alt='login-image' /> */}
                 </div>
-                {/* <Grid> */}
-                    <Paper className='paperStyle'>
-                        <Grid align={'center'}>
-                            <Avatar className='avatarstyle'>
-                                <LoginIcon />
-                            </Avatar>
-                            <h2>Login</h2>
-                            <h4>Please enter the details below</h4>
-                        </Grid>
-                        <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema} >
-                            {(props) => (
-                                <Form >
-                                    {console.log(props)}
-                                    <Field as={TextField} className='textfield' label='Username' name='username'
-                                        placeholder="Username" fullWidth align={'center'}
-                                        helperText={<ErrorMessage name='username' />}
+                <Paper className='paperStyle'>
+                    <Grid align={'center'}>
+                        <Avatar className='avatarstyle'>
+                            <LoginIcon />
+                        </Avatar>
+                        <h2>Login</h2>
+                        <h4>Please enter the details below</h4>
+                    </Grid>
+                    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema} >
+                        {(props) => (
+                            <Form >
+                                {console.log(props)}
+                                <Field as={TextField} className='textfield' label='Username' name='username'
+                                    placeholder="Username" fullWidth align={'center'}
+                                    helperText={<ErrorMessage name='username' />}
+                                />
+                                <Field as={TextField} className='textfield' label='Password' name='password'
+                                    placeholder="Password" fullWidth type={'password'}
+                                    helperText={<ErrorMessage name='password' />}
+                                />
+                                <Field as={FormControlLabel} name='remember' control={
+                                    <Checkbox
+                                        color="primary"
                                     />
-                                    <Field as={TextField} className='textfield' label='Password' name='password'
-                                        placeholder="Password" fullWidth type={'password'}
-                                        helperText={<ErrorMessage name='password' />}
-                                    />
-                                    <Field as={FormControlLabel} name='remember' control={
-                                        <Checkbox
-                                            color="primary"
-                                        />
-                                    } label='Remember me' />
-                                    <Button className='signin' variant="contained" disabled={props.isSubmitting} type='submit' color='primary' fullWidth>{props.isSubmitting ? 'Loading' : 'Login'}</Button>
-                                </Form>
-                            )}
-
-                        </Formik>
-                        <Typography className='signin' >
-                            <Link href="#"  onClick={() => {<Forgetpassword/>}} > Forgot Password ?
-                            </Link>
-                        </Typography>
-                        <Typography className='create' > Do you have an account ?
-                            <Link href="#" onClick={() => handleChange("event", 1)}> Create an Account
-                            </Link>
-                        </Typography>
-                    </Paper>
-                {/* </Grid> */}
+                                } label='Remember me' />
+                                <Button className='signin' variant="contained" disabled={props.isSubmitting} type='submit' color='primary' fullWidth>{props.isSubmitting ? 'Loading' : 'Login'}</Button>
+                            </Form>
+                        )}
+                    </Formik>
+                    <Typography className='signin' >
+                                <Link to='/forgetpassword'>Forgot Password ?</Link>
+                    </Typography>
+                    <Typography className='create' > Do you have an account ?
+                        <Link href="#" onClick={() => handleChange("event", 1)}> Create an Account
+                        </Link>
+                    </Typography>
+                </Paper>
             </div>
         </>
     )

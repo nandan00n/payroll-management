@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import { FormHelperText } from '@material-ui/core'
 import './register.css'
 
-export default function Login({ handleChange }) {
+export default function Register({ handleChange }) {
 
     const initialValues = {
         name: '',

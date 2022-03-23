@@ -1,3 +1,9 @@
 *{
     font-family: 'Baloo Bhaina 2', cursive !important;
 }
+
+.navbar >li >Link{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
